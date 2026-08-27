@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>ContadorAI · Demo Interactiva</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
+
     <header>
         <div class="container">
             <h1>ContadorAI: Tu Estudio Contable Automatizado</h1>
@@ -17,23 +21,22 @@
         </div>
     </header>
 
-    <!-- ===== MAIN (HERO + LOADING + EMAIL SENT) ===== -->
+
     <section id="main-section">
         <div class="container">
 
-            <!-- Hero: input + botón -->
             <div id="hero-input-area" class="hero-input">
                 <input type="text" id="emailInput" placeholder="Ingresa el destinatario: *****@gmail.com" />
                 <button id="demoBtn">Ver Demo en Vivo</button>
             </div>
 
-            <!-- Loading (oculto inicialmente) -->
+
             <div id="loading-area" class="loading-area" style="display:none;">
                 <div class="spinner"></div>
                 <p>Enviando correo de prueba...</p>
             </div>
 
-            <!-- EMAIL SENT (nueva sección, oculta inicialmente) -->
+
             <div id="email-sent" class="email-sent">
                 <div class="sent-icon">✅</div>
                 <div class="sent-title">¡Correo enviado!</div>
@@ -46,9 +49,9 @@
                     <button class="btn-contact" id="contactBtn">Contactar soporte</button>
                 </div>
 
-                <!-- Tarjetas de funcionalidades (antes en dashboard) -->
+
                 <div class="dashboard-grid">
-                    <!-- Tarjeta 1: Calendario Inteligente -->
+
                     <div class="card">
                         <div class="card-icon">📅</div>
                         <h3>Calendario Inteligente (26/08/2026)</h3>
@@ -57,7 +60,7 @@
                         <p class="card-footnote">El sistema calcula fechas según el dígito del CUIT y aplica resoluciones de ARCA en tiempo real.</p>
                     </div>
 
-                    <!-- Tarjeta 2: Alertas Normativas -->
+
                     <div class="card">
                         <div class="card-icon">⚖️</div>
                         <h3>Alertas Normativas</h3>
@@ -66,7 +69,6 @@
                         <p class="card-footnote">Nuestro scraper del Boletín Oficial te avisa solo lo que afecta a tu cartera de clientes, con resumen ejecutivo.</p>
                     </div>
 
-                    <!-- Tarjeta 3: Generación de VEPs -->
                     <div class="card">
                         <div class="card-icon">💳</div>
                         <h3>Generación de VEPs</h3>
@@ -80,7 +82,7 @@
         </div>
     </section>
 
-    <!-- ===== FEATURES (explicación) ===== -->
+
     <section id="features">
         <div class="container">
             <div class="feature-grid">
@@ -103,7 +105,6 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <p>Desarrollado para contadores argentinos. Backend personalizado disponible.</p>
@@ -111,7 +112,6 @@
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
-<script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
