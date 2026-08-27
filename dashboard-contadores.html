@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel del Contador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="book">
+  <div class="book-inner">
+
+    <div class="top-row">
+      <div>
+        <span class="eyebrow">Libro mayor digital | Última actualización · 26 de agosto de 2026</span>
+        <h1>Panel del Contador</h1>
+        <p class="subtitle">Un solo lugar para ver el estado del estudio: movimientos del día, vencimientos que se vienen y las herramientas que vas armando.</p>
+      </div>
+      <div class="seal">
+        <div class="folio">N° 07</div>
+        <div class="folio-label">Folio activo</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Ingresos del mes</div>
+        <div class="kpi-value">$ 3.284.750</div>
+        <div class="kpi-delta up">▲ 5,4% vs. mes anterior</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Egresos del mes</div>
+        <div class="kpi-value">$ 3.115.200</div>
+        <div class="kpi-delta down">▲ 4,1% vs. mes anterior</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">IVA estimado</div>
+        <div class="kpi-value">$ 684.320</div>
+        <div class="kpi-delta down">Vence próximamente en X dias</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Clientes activos</div>
+        <div class="kpi-value">36</div>
+        <div class="kpi-delta up">▲ 3 nuevos este mes</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel-card">
+        <div class="panel-head">
+          <h2>Movimientos recientes</h2>
+          <span>Ver todos →</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Concepto</th>
+              <th>Cliente</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Fecha">21/08</td>
+              <td data-label="Concepto">Honorarios – liquidación mensual</td>
+              <td data-label="Cliente">Bazar del Sur SRL</td>
+              <td data-label="Monto" class="mono pos">+ $ 180.000</td>
+              <td data-label="Estado"><span class="estado pagado">Pagado</span></td>
+            </tr>
+            <tr>
+              <td data-label="Fecha">22/08</td>
+              <td data-label="Concepto">Pago SUTERH – cargas sociales</td>
+              <td data-label="Cliente">Consorcio Belgrano 450</td>
+              <td data-label="Monto" class="mono neg">− $ 96.400</td>
+              <td data-label="Estado"><span class="estado pendiente">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td data-label="Fecha">24/08</td>
+              <td data-label="Concepto">Factura A – asesoría trimestral</td>
+              <td data-label="Cliente">García &amp; Asoc.</td>
+              <td data-label="Monto" class="mono pos">+ $ 245.000</td>
+              <td data-label="Estado"><span class="estado pagado">Pagado</span></td>
+            </tr>
+            <tr>
+              <td data-label="Fecha">25/08</td>
+              <td data-label="Concepto">ARBA – Ingresos Brutos</td>
+              <td data-label="Cliente">Distribuidora Lamar</td>
+              <td data-label="Monto" class="mono neg">− $ 58.900</td>
+              <td data-label="Estado"><span class="estado pendiente">Pendiente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h2>Próximos vencimientos</h2>
+          <span>ARCA · ARBA</span>
+        </div>
+        <ul class="venc-list">
+          <li>
+            <div>
+              <div class="venc-name">IVA – Posición mensual</div>
+              <span class="venc-org">ARCA</span>
+            </div>
+            <span class="venc-days urgente">3 días</span>
+          </li>
+          <li>
+            <div>
+              <div class="venc-name">Ingresos Brutos</div>
+              <span class="venc-org">ARBA</span>
+            </div>
+            <span class="venc-days urgente">6 días</span>
+          </li>
+          <li>
+            <div>
+              <div class="venc-name">Ganancias – Anticipo 4</div>
+              <span class="venc-org">ARCA</span>
+            </div>
+            <span class="venc-days">11 días</span>
+          </li>
+          <li>
+            <div>
+              <div class="venc-name">SICORE – Retenciones</div>
+              <span class="venc-org">ARCA</span>
+            </div>
+            <span class="venc-days">14 días</span>
+          </li>
+          <li>
+            <div>
+              <div class="venc-name">Tasa municipal</div>
+              <span class="venc-org">Municipio de La Plata</span>
+            </div>
+            <span class="venc-days">19 días</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Tab lateral -->
+<button class="tools-tab" id="toolsTab" aria-expanded="false" aria-controls="toolsPanel">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="7" height="7" rx="1"></rect>
+    <rect x="13" y="4" width="7" height="7" rx="1"></rect>
+    <rect x="4" y="13" width="7" height="7" rx="1"></rect>
+    <rect x="13" y="13" width="7" height="7" rx="1"></rect>
+  </svg>
+  <span class="tab-label">Herramientas</span>
+</button>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="tools-panel" id="toolsPanel">
+  <div class="tools-header">
+    <div>
+      <h2>Herramientas</h2>
+      <p>Fichero del estudio. Cada tarjeta va a abrir la herramienta que vayas construyendo.</p>
+    </div>
+    <button class="close-btn" id="closePanel" aria-label="Cerrar panel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="4" x2="20" y2="20"></line>
+        <line x1="20" y1="4" x2="4" y2="20"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="tools-list">
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="7" cy="7" r="2.6"></circle>
+          <circle cx="17" cy="17" r="2.6"></circle>
+          <line x1="5" y1="19" x2="19" y2="5"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Notificaciones de vencimientos</p>
+        <p class="tool-desc">Monitorización de fechas de caducidad con avisos programados</p>
+        <span class="tool-open"><a href="./Back/NotificacionesVencimiento/Notificaciones_de_vencimiento.html">Abrir herramienta →</a></span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="9" r="5.5"></circle>
+          <circle cx="15.5" cy="15" r="5.5"></circle>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Alertas de cambios normativos</p>
+        <p class="tool-desc">Mantenerse al dia con los cambios de las normas.</p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <line x1="5" y1="19" x2="5" y2="11"></line>
+          <line x1="12" y1="19" x2="12" y2="6"></line>
+          <line x1="19" y1="19" x2="19" y2="14"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Generación de VEPs</p>
+        <p class="tool-desc"></p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="5" width="16" height="15" rx="1.5"></rect>
+          <line x1="4" y1="9.5" x2="20" y2="9.5"></line>
+          <line x1="8" y1="3" x2="8" y2="7"></line>
+          <line x1="16" y1="3" x2="16" y2="7"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Panel de control unificadol</p>
+        <p class="tool-desc"></p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3.5h9l3 3v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"></path>
+          <line x1="8" y1="12" x2="16" y2="12"></line>
+          <line x1="8" y1="16" x2="13" y2="16"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Carga automática de planes de pagos</p>
+        <p class="tool-desc"></p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="9" width="16" height="11" rx="1"></rect>
+          <path d="M8 9V6a4 4 0 0 1 8 0v3"></path>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Amortizaciones</p>
+        <p class="tool-desc">Bienes de uso y su depreciación anual.</p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 8h13l-3-3"></path>
+          <path d="M20 16H7l3 3"></path>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Conversor de Moneda</p>
+        <p class="tool-desc">Dólar oficial, MEP y blue actualizados.</p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"></path>
+          <path d="M10.3 19a1.8 1.8 0 0 0 3.4 0"></path>
+        </svg>
+      </div>
+      <div>
+        <p class="tool-name">Notas del Estudio</p>
+        <p class="tool-desc">Recordatorios internos para el equipo.</p>
+        <span class="tool-open">Abrir herramienta →</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tools-footer">Fichero · 8 herramientas cargadas</div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
