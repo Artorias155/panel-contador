@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  const API_URL = "https://backends-cvdm.onrender.com";
+  const API_URL = "https://backends-cvdm.onrender.com/enviar-notificacion";
 
   const emailInput       = document.getElementById("emailInput");
   const demoBtn          = document.getElementById("demoBtn");
