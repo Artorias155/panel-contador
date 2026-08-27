@@ -18,13 +18,16 @@
   --amber-light:#FBF2DF;
   --shadow: 0 12px 32px -16px rgba(26,35,50,0.18);
   --shadow-sm: 0 2px 8px rgba(26,35,50,0.06);
+  --body-bg:#0F1D33;
+  --body-bg-2:#152A4A;
 }
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
 
 body{
-  background:var(--surface);
+  background:
+    radial-gradient(1100px 560px at 50% -8%, var(--body-bg-2) 0%, var(--body-bg) 60%);
   min-height:100vh;
   font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color:var(--ink);
