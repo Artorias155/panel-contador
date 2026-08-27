@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // NOTA: En producción, asegúrate de que esta URL use HTTPS.
-  const API_URL = "http://localhost:8000/enviar-notificacion";
+  const API_URL = "https://backends-cvdm.onrender.com";
 
-  // Selectores
   const emailInput       = document.getElementById("emailInput");
   const demoBtn          = document.getElementById("demoBtn");
   const heroInputArea    = document.getElementById("hero-input-area");
@@ -15,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerContactBtn = document.getElementById("footerContactBtn");
   const generateVepBtn   = document.getElementById("generateVepBtn");
 
-  // Defensa: Verificamos que los elementos principales existan
   if (!emailInput || !demoBtn || !heroInputArea || !loadingArea || !emailSentArea) {
     console.warn("ContadorAI: Faltan elementos clave en el DOM. Script detenido.");
     return;
@@ -23,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let ultimoEmailEnviado = "";
 
-  // Estado inicial
+
   emailSentArea.style.display = "none";
   loadingArea.style.display = "none";
 
@@ -32,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function enviarCorreoDemo(email) {
-    // 1. Capturamos el token inyectado por el widget de Cloudflare Turnstile
+
     const tokenElement = document.querySelector('[name="cf-turnstile-response"]');
     const turnstileToken = tokenElement ? tokenElement.value : "";
 
@@ -45,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ 
         email: email,
-        turnstile_token: turnstileToken // Enviamos el token al backend
+        turnstile_token: turnstileToken 
       }),
     });
 
@@ -58,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function manejarEnvio(email) {
-    // Bloqueamos la interfaz para evitar clicks dobles (Race Conditions)
+
     demoBtn.disabled = true;
     emailInput.disabled = true;
 
@@ -77,20 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
       heroInputArea.style.display = "flex";
       alert("Hubo un problema: " + error.message);
     } finally {
-      // Liberamos los controles independientemente del resultado
+
       demoBtn.disabled = false;
       emailInput.disabled = false;
       emailInput.focus();
 
-      // 2. Reseteamos el Captcha. Vital para evitar que envíe un token ya consumido
-      // si el usuario comete un error y vuelve a intentarlo.
+
       if (typeof turnstile !== 'undefined') {
         turnstile.reset();
       }
     }
   }
 
-  // --- Event Listeners ---
+
   demoBtn.addEventListener("click", () => {
     const email = emailInput.value.trim();
     if (!esEmailValido(email)) {
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Secundarios
+
   if (resendBtn) {
     resendBtn.addEventListener("click", () => {
       if (ultimoEmailEnviado) manejarEnvio(ultimoEmailEnviado);
